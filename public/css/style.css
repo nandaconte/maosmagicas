@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Marcellus&display=swap');
+
+*{
+    font-family: "Marcellus", serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+    overflow-x: hidden;
+}
+.brand img{
+    margin-left: 1rem;
+    height: 7rem;
+    width: auto;
+    z-index: 2;
+    padding: 0.5rem;
+    left: 1rem;
+    border-radius: 1rem;
+    background-color: #7c0806;
+    position: absolute;
+}
+
+/*NAVBAR*/
+.primary{
+    background-color: #7c0806;
+    height: 3rem;
+}
+.second{
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.second .nav-itens{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+    gap: 2rem;
+}
+.second .nav-itens a{
+    text-decoration: none;
+    color: #111;
+    font-size: 0.9rem;
+    transition: 1s;
+    font-weight: bold;
+}
+.second a:hover{
+    color: #7c0806;
+    font-size: 0.8rem;
+}
+.primary .social{
+    width: 100%;
+    gap: 2rem;
+    display: flex;
+    justify-content: end;
+    margin-right: 2rem;
+}
+.social a{
+    color: #fff;
+    transition: 1s;
+    overflow-y: hidden;
+}
+.social a:hover{
+    font-size: 0.8rem;
+}
+
+
+/*CONTAINER BANNER*/
+.container-banner{
+    height: 100vh;
+    max-height: 90vh;
+    overflow: hidden;
+}
+.container-banner .row{
+    padding: 0;
+    margin: 0;
+}
+.container-banner .row .col-sm-6{
+    overflow: hidden;
+}
+.container-banner .row .col-sm-6 img{
+    width: 100%;
+    padding-bottom: 12px;
+}
+.container-banner .row .col-sm-3{
+    padding: 0;
+}
+.container-banner .mov1{
+    animation: moveright 3s;
+}
+.container-banner .mov2{    
+    animation: moveleft 3s;
+    overflow-y: hidden;
+}
+.container-banner .mov3{
+    animation: movedown 3s;
+}
+.container-banner .mov4{
+    animation: moveup 3s;
+}
+
+/*FOOTER*/
+.footer p{
+    background-color: #7c0806;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+    margin: 0;
+    left: 0;
+    position: fixed;
+}
+
+/*SERVICES*/
+#services{
+    margin: 3rem 2rem 0 2rem;
+}
+#services h4{
+    overflow: hidden;
+}
+#services .card-service{
+    margin: 0;
+    border-right: 3px solid #7c0806;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #fff, #fff, #eca2a0);
+    animation: moveright 3s;
+}
+#services .right{   
+    background: linear-gradient(90deg, #eca2a0, #fff, #fff);
+    animation: moveleft 3s;
+    border-right: none;
+    border-left: 3px solid #7c0806;
+
+}
+#services img{
+    height: 8rem;
+    width: auto;
+    border-radius: 50%;
+}
+#services p{
+    text-align: justify;
+}
+#services .btn{
+    background-color: #7c0806;
+    color: #fff;
+    transition: 1s;
+}
+#services .btn:hover{
+    background-color: #c41512;
+    color: #fff;
+}
+
+/*AGENDAR*/
+#agendar{
+    margin: 5rem 2rem;
+    text-align: center;
+}
+#agendar h4,
+#agendar h6{
+    overflow: hidden;
+}
+#agendar a{
+    font-weight: bold;
+    color: #7c0806;
+    text-decoration: none;
+}
+#agendar .row{
+    margin: 1rem;
+}
+#agendar details{
+    margin: 1rem;
+    padding: 1rem;
+    background: linear-gradient(90deg,#eca2a0, #fff);
+    border-radius: 1rem;  
+    text-align: start;
+}
+#agendar summary{
+    list-style-type: none;
+}
+#agendar summary .inactive{
+    display: none;
+}
+#agendar details[open] summary .active{
+    display: none;
+}
+#agendar details[open] summary .inactive{
+    display: inline-block;
+}
+#agendar .btn{
+    background-color: #7c0806;
+    color: #fff;
+    transition: 1s;
+    margin-bottom: 1rem;
+}
+#agendar .btn:hover{
+    background-color: #c41512;
+    color: #fff;
+}
+#margin{
+    margin: 0rem 5rem;
+}
+
+
+/*LOGIN STAFF E REGISTER*/
+.auth-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.auth-container .col input{
+    width: 15rem;
+}
+.auth-container .card-form{
+    background: linear-gradient(45deg,#eca2a0, #fff);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.card-form .btn{
+    background-color: #7c0806;
+    color: #fff;
+    transition: 1s;
+}
+.card-form .btn:hover{
+    background-color: #c41512;
+    color: #fff;
+}
+
+@keyframes moveright {
+    0%{
+        transform: translateX(-30vh);
+        opacity: 0;
+      }
+      100%{
+        transform: translateX(0vh);
+        opacity: 1;
+      }    
+}
+@keyframes moveleft {
+    0%{
+        transform: translateX(30vh);
+        opacity: 0;
+      }
+      100%{
+        transform: translateX(0vh);
+        opacity: 1;
+      }    
+}
+@keyframes moveup {
+    0%{
+        transform: translateY(30vh);
+        opacity: 0;
+      }
+      100%{
+        transform: translateY(0vh);
+        opacity: 1;
+      }    
+}
+@keyframes movedown {
+    0%{
+        transform: translateY(-30vh);
+        opacity: 0;
+      }
+      100%{
+        transform: translateY(0vh);
+        opacity: 1;
+      }    
+}

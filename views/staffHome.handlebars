@@ -1,0 +1,27 @@
+<div class="dashboard">
+
+    <div class="title-container">
+        <h2>Dashboard</h2>
+    </div>
+    <h3>Agendamentos</h3>
+    <ul>
+        {{each agenda}}
+        <li>
+            <span class="label">{{this.cpf}}</span>
+            <span class="label">{{this.dia}}</span>
+            <span class="label">{{this.horario}}</span>
+            <span class="label">{{this.prcedimento}}</span>
+            <span class="label">{{this.profissional}}</span>
+           <span class="action">
+            <a href="/agenda/editar{{this.cpf}}" class="btn"> Editar</a>
+            <form action="/agenda/remover" method="POST">
+                        <input type="hidden" name="id" value="{{this.cpf}}">
+                        <input type="submit" value="Excluir" class="btn">
+                    </form>
+           </span>
+        </li>
+    </ul>
+        {{#if emptyToughts}}
+        <p>Sem agendamentos
+    {{/if}}
+</div>
